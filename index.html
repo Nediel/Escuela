@@ -1,0 +1,57 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Comportamiento Escolar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>Sistema de Comportamiento Escolar</header>
+  <main>
+    <!-- Registro de Estudiante -->
+    <section class="card">
+      <h2>Registrar Estudiante</h2>
+      <form id="studentForm">
+        <label>Nombre completo:</label>
+        <input type="text" id="name" required>
+        <label>Cédula/ID:</label>
+        <input type="text" id="id" required>
+        <label>Nivel escolar:</label>
+        <input type="text" id="level" required>
+        <button type="submit">Registrar estudiante</button>
+      </form>
+    </section>
+
+    <!-- Registro de Comportamiento -->
+    <section class="card">
+      <h2>Registrar Comportamiento</h2>
+      <form id="recordForm">
+        <label>Seleccionar estudiante:</label>
+        <select id="studentSelect" required>
+          <option value="">-- Selecciona un estudiante --</option>
+        </select>
+        <label>Tipo de registro:</label>
+        <select id="recordType" required>
+          <option value="amonestacion">Amonestación</option>
+          <option value="citacion">Citación</option>
+          <option value="suspension">Suspensión</option>
+        </select>
+        <label>Razón:</label>
+        <textarea id="reason" rows="3" required placeholder="Describe la razón..."></textarea>
+        <label>Fecha:</label>
+        <input type="date" id="date" required>
+        <button type="submit">Registrar</button>
+      </form>
+    </section>
+
+    <!-- Búsqueda y Resultados -->
+    <section class="card">
+      <h2>Consultar registros</h2>
+      <input type="text" id="searchId" placeholder="Cédula o nombre">
+      <button id="searchBtn">Buscar</button>
+      <div id="results"></div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
